@@ -1,0 +1,52 @@
+﻿<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="../../libs/jquery-2.1.1.min.js"></script>
+<script>
+    var mmPlayerProto = Object.create(HTMLElement.prototype);
+    mmPlayerProto.createdCallback = function () {
+        var content = document.querySelector('link[rel=import]').import.querySelector("div");
+
+        $("button[data-command=prev]", content).on("click", function () { console.info(1); });
+        $("button[data-command=play-pause]", content).on("click", function () { console.info(2); });
+        $("button[data-command=next]", content).on("click", function () { console.info(3); });
+        $("button[data-command=shuffle]", content).on("click", function () { console.info(4); });
+        $("button[data-command=algorithm]", content).on("click", function () { console.info(5); });
+
+        this.appendChild(content);
+        //var shadow = this.createShadowRoot();
+        //shadow.appendChild(content);
+    };
+    var mmPlayer = document.registerElement("mm-player", {
+        prototype: mmPlayerProto
+    });
+</script>
+<div class="mm-player">
+    <div class="thumbnail">
+
+    </div>
+    <div class="song-info">
+        <div class="name">
+            Space Crunkadelix
+        </div>
+        <div class="album">
+            Ample Mammal    
+        </div>
+        <div class="artist">
+            Polish Ambassador
+        </div>
+        <button data-command="details" title="details">Song Details</button>
+    </div>
+    <div class="commands">
+        <button data-command="prev" title="previous">Prev</button>
+        <button data-command="play-pause" title="play/pause">Play/Pause</button>
+        <button data-command="next" title="next" >Next</button>
+        <button data-command="repeat" title="repeat">Repeat</button>
+        <button data-command="shuffle" title="shuffle">Shuffle</button>
+        <select data-command="algorithm" title="select shuffle algorithm">
+            <option>Random</option>
+            <option>Prefer favorites</option>
+            <option>Prefer recently added</option>
+            <option>Prefer most played</option>
+            <option>Prefer least played</option>
+        </select>
+    </div>
+</div>

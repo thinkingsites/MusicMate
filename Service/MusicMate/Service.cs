@@ -14,6 +14,7 @@ namespace MusicMate
         public void Start()
         {
             WebApp.Start<WebApiConfiguration>("http://localhost:22555");
+            Console.WriteLine("Running on http://localhost:22555");
         }
         public void Stop()
         {

@@ -1,0 +1,57 @@
+﻿mm-player {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    border-top:solid 1px black;
+    padding:10px;
+
+    .thumbnail {
+        border:solid 1px black;
+        height:50px;
+        width:50px;
+    }
+    
+    .song-info {
+        position:absolute;
+        left: 70px;
+        top: 10px;
+        .name { font-size:20px; font-weight:bold; display:inline-block;  }
+        .artist { font-size:12px; display:inline-block; }
+        .album { font-size:12px; display:inline-block; 
+            &:after { content : '-'; }
+        }
+    }
+
+    .commands
+    {
+        position:absolute;
+        left: 70px;
+        top: 40px;
+        button { 
+            background-color:transparent;
+            border:none;
+            height:20px;
+            width:20px;
+            margin-right:10px;
+            text-indent:200%;
+            overflow:hidden;
+            white-space:nowrap;
+            outline:none;
+            background-image:url(../../images/mm-player-sprites.gif);
+            background-size:auto 20px;
+            background-repeat:no-repeat;
+            cursor:pointer;
+
+            &[data-command=next] { background-position-x:0; }
+            &[data-command=prev] { background-position-x:-20px; }
+            &[data-command=play-pause] { background-position-x:-40px; }
+            &[data-command=repeat] { background-position-x:-100px;  }
+            &[data-command=repeat-one] { background-position-x:-120px;  }
+            &[data-command=repeat-none] { background-position-x:-140px;  }
+            &[data-command=shuffle] { background-position-x:-160px;  }
+        }
+    }
+
+    
+}  

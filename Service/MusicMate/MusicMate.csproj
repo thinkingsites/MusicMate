@@ -109,9 +109,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\IOController.cs" />
+    <Compile Include="Controllers\LibraryController.cs" />
     <Compile Include="WebApiConfiguration.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\Static.cs" />
+    <Compile Include="Controllers\PublicFilesController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />
@@ -122,12 +124,49 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="public\css\css-icons.css" />
+    <Content Include="public\css\jqueryui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="public\css\jqueryui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="public\css\jqueryui\images\ui-icons_222222_256x240.png" />
+    <Content Include="public\css\jqueryui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="public\css\jqueryui\images\ui-icons_454545_256x240.png" />
+    <Content Include="public\css\jqueryui\images\ui-icons_888888_256x240.png" />
+    <Content Include="public\css\jqueryui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="public\css\jqueryui\jquery-ui.min.css" />
+    <Content Include="public\css\jqueryui\jquery-ui.structure.min.css" />
+    <Content Include="public\css\jqueryui\jquery-ui.theme.min.css" />
+    <Content Include="public\css\jstree\32px.png" />
+    <Content Include="public\css\jstree\40px.png" />
+    <Content Include="public\css\jstree\style.css" />
+    <Content Include="public\css\jstree\style.min.css" />
+    <Content Include="public\css\jstree\throbber.gif" />
+    <Content Include="public\css\reset.css" />
+    <Content Include="public\images\jquery-ui-sprites.png" />
+    <Content Include="public\images\mm-player-sprites.gif" />
+    <Content Include="public\libs\jquery-2.1.1.min.js" />
+    <Content Include="public\libs\jquery-ui.1.11.2.min.js" />
+    <Content Include="public\libs\jstree.min.js" />
+    <Content Include="public\libs\require.css.min.js" />
+    <Content Include="public\scripts\data-main.js" />
+    <Content Include="public\widgets\mm-player\style.css" />
+    <Content Include="public\widgets\mm-player\widget.html" />
+    <Content Include="public\libs\require.2.1.15.js" />
+    <EmbeddedResource Include="public\html\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="public\css\" />
-    <Folder Include="public\html\" />
-    <Folder Include="public\libs\" />
-    <Folder Include="public\scripts\" />
+    <ProjectReference Include="..\MusicMate.Business\MusicMate.Business.csproj">
+      <Project>{01e7877f-f905-46a6-ab90-b605d8ef069f}</Project>
+      <Name>MusicMate.Business</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
