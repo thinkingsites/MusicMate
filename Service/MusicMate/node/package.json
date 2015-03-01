@@ -1,0 +1,11 @@
+{
+	"dependencies" : 
+	{
+		"grunt-contrib-watch" : "*",
+		"grunt-contrib-less" : "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-clean" : "*",
+		"grunt-react" : "*",
+		"grunt-reactjsx" : "*"
+	}
+}

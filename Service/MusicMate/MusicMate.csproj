@@ -161,7 +161,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="node\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MusicMate.Business\MusicMate.Business.csproj">
       <Project>{01e7877f-f905-46a6-ab90-b605d8ef069f}</Project>
